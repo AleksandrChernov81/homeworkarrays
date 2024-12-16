@@ -1,4 +1,5 @@
 package ru.netology.homeworkarraysmvn.stats;
+
 public class StatsService {
     public int minSales(long[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
@@ -29,50 +30,51 @@ public class StatsService {
         int amount = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            amount += (int) sales[i];
+            amount += (long) sales[i];
 
         }
 
         return amount;
     }
+
     public int averageamount(long[] sales) { // средняя сумма продаж за все месяцы
 
         int amount = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            amount += (int) sales[i];
+            amount += (long) sales[i];
 
         }
         return amount / sales.length;
     }
 
 
-   public int moreaverage(long[] sales) { // месяца с продажами выше среднего
-       int averageamount = averageamount(sales);
+    public int moreaverage(long[] sales) { // месяца с продажами выше среднего
+        int averageamount = averageamount(sales);
 
-       int moreSales = 0;
+        int moreSales = 0;
 
-       for (int i = 0; i < sales.length; i++) {
-           if (averageamount < sales[i]) {
-               moreSales++;
+        for (int i = 0; i < sales.length; i++) {
+            if (averageamount < sales[i]) {
+                moreSales++;
 
-           }
-       }
-           return moreSales;
-       }
+            }
+        }
+        return moreSales;
+    }
 
-       public int lessaverage(long[] sales) {  // месяца с продажами ниже среднего
-           int averageamount = averageamount(sales);
+    public int lessaverage(long[] sales) {  // месяца с продажами ниже среднего
+        int averageamount = averageamount(sales);
 
-           int lessSales = 0;
+        int lessSales = 0;
 
-           for (int i = 0; i < sales.length; i++) {
-               if (averageamount > sales[i]) {
-                   lessSales++;
+        for (int i = 0; i < sales.length; i++) {
+            if (averageamount > sales[i]) {
+                lessSales++;
 
-               }
-           }
-           return lessSales;
+            }
+        }
+        return lessSales;
 
-       }
-   }
+    }
+}
