@@ -25,9 +25,9 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int amount(long[] sales) { // сумма всех продаж
+    public long amount(long[] sales) { // сумма всех продаж
 
-        int amount = 0;
+        long amount = 0;
 
         for (int i = 0; i < sales.length; i++) {
             amount += (long) sales[i];
@@ -37,9 +37,9 @@ public class StatsService {
         return amount;
     }
 
-    public int averageamount(long[] sales) { // средняя сумма продаж за все месяцы
+    public long averageAmount(long[] sales) { // средняя сумма продаж за все месяцы
 
-        int amount = 0;
+        long amount = 0;
 
         for (int i = 0; i < sales.length; i++) {
             amount += (long) sales[i];
@@ -49,13 +49,13 @@ public class StatsService {
     }
 
 
-    public int moreaverage(long[] sales) { // месяца с продажами выше среднего
-        int averageamount = averageamount(sales);
+    public int moreAverage(long[] sales) { // месяца с продажами выше среднего
+        long averageAmount = averageAmount(sales);
 
         int moreSales = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (averageamount < sales[i]) {
+            if (averageAmount < sales[i]) {
                 moreSales++;
 
             }
@@ -63,13 +63,13 @@ public class StatsService {
         return moreSales;
     }
 
-    public int lessaverage(long[] sales) {  // месяца с продажами ниже среднего
-        int averageamount = averageamount(sales);
+    public int lessAverage(long[] sales) {  // месяца с продажами ниже среднего
+        long averageAmount = averageAmount(sales);
 
         int lessSales = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (averageamount > sales[i]) {
+            if (averageAmount > sales[i]) {
                 lessSales++;
 
             }

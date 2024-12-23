@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class StatsServiceTest {
     @Test
-    public void shouldFindminMonth() {
+    public void shouldFindMinMonth() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMonth = 9;
@@ -16,7 +16,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void shouldFindmaxMonth() {
+    public void shouldFindMaxMonth() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -28,7 +28,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void shouldFindamount() {
+    public void shouldFindAmount() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -40,36 +40,36 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void shouldFindaverageamount() {
+    public void shouldFindAverageAmount() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 15;
-        long actual = service.averageamount(sales);
+        long actual = service.averageAmount(sales);
 
         Assertions.assertEquals(expected, actual);
 
     }
     @Test
 
-    public void shouldmoreaverage() {
+    public void shouldMoreAverage() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMonth = 5;
-        int actualMonth = service.moreaverage(sales);
+        int actualMonth = service.moreAverage(sales);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
 
     }
 
     @Test
-    public void shouldlessaverage() {
+    public void shouldLessAverage() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMonth = 5;
-        int actualMonth = service.lessaverage(sales);
+        int actualMonth = service.lessAverage(sales);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
 
